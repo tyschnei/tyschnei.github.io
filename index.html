@@ -1,15 +1,115 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Tyler Schneider">
-    <meta name="description" content="Tyler Schneider's personal website">
-    <meta name="keywords" content="Tyler Schneider, tyschnei, personal website">
-    
-</head>
-
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Tyler Schneider">
+        <meta name="description" content="Tyler Schneider's personal website">
+        <meta name="keywords" content="Tyler Schneider, tyschnei, personal website">
+        <!-- Used for proper scaling and interactions on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+        <style>
+
+            /* The side navigation menu */
+            .sidebar {
+                margin: 0;
+                padding: 0;
+                width: 200px;
+                background-color: #253a97;
+                position: fixed;
+                height: 100%;
+                overflow: auto;
+                box-shadow: 0 2px 5px 0px #888888;
+            }
+
+            /* Sidebar links */
+            .sidebar a {
+                display: block;
+                color: rgb(245, 245, 245);
+                padding: 16px;
+                text-decoration: none;
+                font-size: 25px;
+                transition: 0.4s;
+            }
+
+            /* Links on mouse-over */
+            .sidebar a:hover {
+                color: rgb(156, 156, 156);
+            }
+
+            .img-wrapper {
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+
+            #self {
+                border-style: solid; 
+                border-width: 4px;
+                border-color:rgb(245, 245, 245);
+                border-radius: 84px
+            }
+            .sidebar-content {
+                font-family: Verdana, Helvetica, Arial, sans-serif;
+            }
+
+            div.content {
+                margin-left: 200px;
+                padding: 2px 16px;
+                height: 1000px;
+            }
+
+            /*  If screen is less than 700px, extend the "sidenav" across entire width to make it
+                a topnav bar */
+            @media screen and (max-width: 700px) {
+                .sidebar {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                }
+
+                .img-wrapper {
+                    display: none;
+                }
+
+                #self {
+                    visibility: hidden;
+                }
+
+                .sidebar a {
+                    text-align: center;
+                    float: left;  
+                }
+
+                div.content {
+                    margin-left: 0;
+                }
+            }
+        </style>
+
+    </head>
     <body>
-        <h1>Welcome to my website!</h1>
+
+        <!-- The sidebar -->
+        <div class="sidebar">
+            <div class="img-wrapper" style="text-align: center">
+                <img id="self" src="https://i.imgur.com/DrEcGYl.jpg" height="168" width="168" alt="Self-picture">
+            </div>
+            <div class="sidebar-content">
+                <a class="sidebar-entry" href="#home">About</a>
+                <a class="sidebar-entry" href="#projects">Projects</a>
+                <a class="sidebar-entry" href="#blog">Blog</a>
+                <a class="sidebar-entry" href="#skills">Skills</a>
+                <a class="sidebar-entry" href="#contact">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Page content -->
+        <div class="content">
+            <h1>Welcome to my website!</h1>
+        </div>
     </body>
 </html>
