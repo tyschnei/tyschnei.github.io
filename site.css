@@ -1,0 +1,115 @@
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    /*1: background-color: #253a97;*/
+    background-color: #e07832;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 0 2px 5px 0px #888888;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: rgb(245, 245, 245);
+    padding: 16px;
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.4s;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover {
+    color: rgb(200, 200, 200);
+}
+
+.img-wrapper-sidebar {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#self-sidebar {
+    border-style: solid; 
+    border-width: 4px;
+    border-color:rgb(245, 245, 245);
+    border-radius: 84px
+}
+
+.img-wrapper-body {
+    display: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#self-body {
+    border-style: solid; 
+    border-width: 4px;
+    border-color:#e07832;
+    border-radius: 84px
+}
+
+.sidebar-content {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    color: rgb(245, 245, 245);
+}
+
+.content {
+    margin-left: 200px;
+    padding: 2px 16px;
+    height: 1440px;
+    background-color: rgb(240, 240, 240);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#name {
+    text-align: center;
+    color: #e07832;
+}
+
+#bio {
+    text-align: center;
+    font-size: 18px;
+    color:rgb(48, 48, 48)
+}
+
+.info {
+    border-bottom: 20px;
+}
+
+/*  If screen is less than 700px, extend the "sidenav" across entire width to make it
+    a topnav bar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 14px;
+    }
+
+    .img-wrapper-sidebar {
+        display: none;
+    }
+
+    #self-sidebar {
+        visibility: hidden;
+    }
+
+    .img-wrapper-body {
+        display: block;
+    }
+
+    .sidebar a {
+        float: left;
+        font-size: 16px; 
+        padding: 12px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}

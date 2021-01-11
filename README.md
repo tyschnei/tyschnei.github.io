@@ -1,2 +1,2 @@
 # tyschnei.github.io
-Personal Website
+This is my personal website -- please enjoy!
