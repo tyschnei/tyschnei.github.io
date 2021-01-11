@@ -4,12 +4,124 @@
     <meta name="author" content="Tyler Schneider">
     <meta name="description" content="Tyler Schneider's personal website">
     <meta name="keywords" content="Tyler Schneider, tyschnei, personal website">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* The side navigation menu */
+        .sidenav {
+            height: 100%; /* 100% Full-height */
+            width: 250px; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: rgb(41, 63, 124); /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #eeeeee;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #aaaaaa;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+            margin-left: 250px;
+        }
+
+        #hamburger_menu {
+            transition: opacity 0.5s;
+            cursor: pointer;
+            width: 35px;
+        }
+        #hamburger_menu:hover {
+            cursor: pointer;
+        }
+
+        .bar{
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+    </style>
 </head>
 
 <html lang="en">
+    <div id="side_nav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Resume and Proficiencies</a>
+        <a href="#">Projects and Links</a>
+        <a href="#">Contact</a>
+    </div>
 
-    <body>
-        <h1>Welcome to my website!</h1>
-    </body>
+    <!-- Use any element to open the sidenav -->
+    <span class="container" id=hamburger_menu onclick="openNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </span>
+
+    
+    <!-- <span onclick="openNav()">open</span> -->
+
+    <div id="main">
+        <body>
+            <h1 id=test>Welcome to my website!</h1>
+        </body>
+    </div>
+    
+
+
 </html>
+
+<script>
+
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+    function openNav() {
+        document.getElementById("side_nav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("hamburger_menu").style.visibility = "hidden";
+
+
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("side_nav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("hamburger_menu").style.visibility = "visible";
+    }
+
+</script>
