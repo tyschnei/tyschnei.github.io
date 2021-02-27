@@ -17,6 +17,7 @@
     color: rgb(245, 245, 245);
     padding: 16px;
     text-decoration: none;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
     font-size: 25px;
     transition: color 0.4s;
 }
@@ -26,11 +27,13 @@
     color: rgb(200, 200, 200);
 }
 
+/* Picture on sidebar */
 .img-wrapper-sidebar {
     padding-top: 16px;
     padding-bottom: 16px;
 }
 
+/* img tage on sidebar */
 #self-sidebar {
     border-style: solid; 
     border-width: 4px;
@@ -38,12 +41,14 @@
     border-radius: 84px
 }
 
+/* Picture in main body of text (when screen width < 700px) */
 .img-wrapper-body {
     display: none;
     padding-top: 16px;
     padding-bottom: 16px;
 }
 
+/* img tag in main body of the page */
 #self-body {
     border-style: solid; 
     border-width: 4px;
@@ -51,11 +56,7 @@
     border-radius: 84px
 }
 
-.sidebar-content {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    color: rgb(245, 245, 245);
-}
-
+/* Main page content */
 .content {
     margin-left: 200px;
     padding: 2px 16px;
@@ -64,19 +65,32 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
+/* h1 element that is my name */
 #name {
     text-align: center;
     color: #e07832;
 }
 
+/* p element that is my bio */
 #bio {
     text-align: center;
     font-size: 18px;
     color:rgb(48, 48, 48)
 }
 
+/* First section of main body */
+
 .info {
-    border-bottom: 20px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgb(175, 175, 175);
+}
+
+.section-header {
+    color: rgb(48, 48, 48)
 }
 
 /*  If screen is less than 700px, extend the "sidenav" across entire width to make it
